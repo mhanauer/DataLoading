@@ -61,14 +61,33 @@ InpatAvatarData = read.csv("InpatAvatarData.csv", header = TRUE)
 OutpatClaimsData = read.csv("OutpatClaimsData.csv", header = TRUE)
 OutpatAvatarData = read.csv("OutpatAvatarData.csv", header = TRUE)
 
+## Adult Health Home Outcomes
+setwd("T:/Clinical Model Materials/Clinical Models/Adult Health Home/Evaluation Materials/Data/2. Vitals/3. October 2018/Matt'sData")
+CIL_South_HCS_vitals_10052018 = read.csv("CIL_South_HCS_vitals_10052018.csv", header = TRUE)
+CIL_west_HCS_vitals_10052018 = read.csv("CIL_west_HCS_vitals_10052018.csv", header = TRUE)
+CIN_HCS_Vitals_10052018 = read.csv("CIN_HCS_Vitals_10052018.csv", header = TRUE)
+CKY_HCS_Vitals_10052018 = read.csv("CKY_HCS_Vitals_10052018.csv", header = TRUE)
 
+setwd("T:/Clinical Model Materials/Clinical Models/Adult Health Home/Evaluation Materials/Data/10. PHQ9/October 2018/Matt'sData")
+CIL_South_HCS_PHQ9_10102018 = read.csv("CIL_South_HCS_PHQ9_10102018.csv", header= TRUE)
+CIL_West_HCS_PHQ9_10102018 = read.csv("CIL_West_HCS_PHQ9_10102018.csv", header= TRUE)
+CIN_HCS_PHQ9_10102018 = read.csv("CIN_HCS_PHQ9_10102018.csv", header = TRUE)
+CKY_HCS_PHQ9_10102018 = read.csv("CKY_HCS_PHQ9_10102018.csv", header = TRUE)
+
+setwd("T:/Clinical Model Materials/Clinical Models/Adult Health Home/Evaluation Materials/Data/11. Tobacco/October 2018/Matt'sData")
+CIL_South_HCS_Tobacco_10052018 = read.csv("CIL_South_HCS_Tobacco_10052018.csv", header = TRUE)
+CIL_west_HCS_Tobacco_10052018 = read.csv("CIL_west_HCS_Tobacco_10052018.csv", header = TRUE)
+CIN_HCS_Tobacco_10052018 = read.csv("CIN_HCS_Tobacco_10052018.csv", header = TRUE)
+CKY_HCS_Tobacco_10052018 = read.csv("CKY_HCS_Tobacco_10052018.csv", header= TRUE)
 
 #Enhanced
 rm(list=ls())
-setwd("P:/Evaluation/TN Lives Count_Writing/3_Target1_SUICClinicalTrainingComparison/3_Data & Analyses")
-datPre = read.csv("Pre.csv", header = FALSE, row.names = NULL)
-setwd("P:/Evaluation/TN Lives Count_Writing/3_Target1_SUICClinicalTrainingComparison/3_Data & Analyses")
-datPost = read.csv("Post.csv", header = FALSE, row.names = NULL)
+setwd("P:/Evaluation/TN Lives Count_Writing/4_Target1_EnhancedCrisisFollow-up/3_Data & Data Analyses")
+datPreAdult = read.csv("Target1EnhancedBaseAdult.csv", header = TRUE)
+datPostAdult = read.csv("Target1EnhancedPostAdult.csv", header = TRUE)
+datAdultTreat = read.csv("AdultTreatments.csv", header = TRUE)
+
+
 
 #RCS
 rm(list=ls())
@@ -76,5 +95,12 @@ setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/RCS/Data")
 dat = read.csv("AAC_RCS_Intake_Clean.csv", header = TRUE)
 
 #Zero Suicide Data
+rm(list=ls())
 setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/ZeroSuicide")
-ITSTest = read.csv("ZSData.csv", header = TRUE)
+ITSTest = read.csv("ZSData.csv", header = TRUE, na.strings = "N/A")
+setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/ZeroSuicide")
+ITSRolling = read.csv("ZeroSuicideRollingSum.csv", header = TRUE, na.strings = "N/A")
+
+#Enhanced Bayes
+setwd("P:/Evaluation/TN Lives Count_Writing/4_Target1_EnhancedCrisisFollow-up/3_Data & Data Analyses")
+dat = read.csv("EnhancedDataSet.csv", header = TRUE)
