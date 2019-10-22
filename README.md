@@ -93,9 +93,12 @@ datPostAdult = read.csv("Target1EnhancedPostAdult.csv", header = TRUE)
 datAdultTreat = read.csv("AdultTreatments.csv", header = TRUE)
 #describe.factor(datAdultTreat$Treatment)
 
+###CCPE Numbers
+setwd("C:/Users/Matthew.Hanauer/Desktop")
+ccpe_numbers = read.csv("CCPENumbers.csv", header = TRUE)
 
 
-#install.packages(“countreg”, repos=http://R-Forge.R-project.org)
+#install.packages("countreg", repos=http://R-Forge.R-project.org)
 
 #RCS
 rm(list=ls())
@@ -110,6 +113,10 @@ setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/ZeroSuicide")
 ITSRolling = read.csv("ZeroSuicideRollingSum.csv", header = TRUE, na.strings = "N/A")
 InSuicides = read.csv("INSuicides.csv", header = TRUE)
 TotalCount = read.csv("TotalCount.csv", header = TRUE)
+#### Rate Zero Suicide
+setwd("P:/Evaluation/TN Lives Count_Writing/ZeroSuicide/Matt'sData")
+zero_suicide = read.csv("zero_suicide.csv", header= TRUE, na.strings = c("multiple ???", "NA"))
+zero_suicide_denom = read.csv("zero_suicide_denom.csv", header = TRUE)
 
 #Enhanced Bayes
 setwd("P:/Evaluation/TN Lives Count_Writing/4_Target1_EnhancedCrisisFollow-up/3_Data & Data Analyses")
@@ -129,6 +136,7 @@ ReassessYouth = read.csv("Reassess 3M CCPE GPRA Youth.csv", header = TRUE, na.st
 
 ### FHHC
 setwd("S:/Indiana Research & Evaluation/FHHC Homelessness/Data and QPR")
+base = read.csv("FHHC_Base.csv", header = TRUE, na.strings = c())
 FHHC_redcap= read.csv("FHHC_redcap.csv", header = TRUE, na.strings = c(-4,-99, -97, -98, -99,-1))
 FHHC = read.csv("FHHC.csv", header = TRUE, na.strings = c(-4,-99, -97, -98, -99,-1))
 
@@ -165,5 +173,54 @@ setwd("S:/Indiana Research & Evaluation/CCPE/NewGPRAData")
 base = read.csv("baseline.csv", header = TRUE, na.strings = c(-99, -98, -97))
 month6 = read.csv("month6.csv", header = TRUE, na.strings = c(-99, -98, -97))
 
+###CCBHC
+setwd("P:/Evaluation/CCBHC IN/Data")
+ccbhc_adult = read.csv("Adult data.csv", header = TRUE, na.strings = c(-1:-11))
+setwd("P:/Evaluation/CCBHC IN/Data")
+ccbhc_child = read.csv("Youth data.csv", header = TRUE, na.strings = c(-1:-11))
 
+###EMERGE
+setwd("S:/Indiana Research & Evaluation/EMERGE CRR/Data")
+base = read.csv("base.csv", header = TRUE)
+month6 = read.csv("month6.csv", header = TRUE)
+
+
+##FHHC reports
+setwd("S:/Indiana Research & Evaluation/FHHC Homelessness/Data and QPR")
+base = read.csv("FHHC_base.csv", header = TRUE, na.strings = c(-99, -98, -97, " "))
+month6 = read.csv("FHHC_Month6.csv", header = TRUE, na.string = c(-99, -98, -97, " "))
+FHHC = read.csv("FHHC.csv", header = TRUE, na.string = c(-99, -98, -97, -1, -4, -5, -7, -9, -2, -6 -8, " "))
+dim(month6)
+dim(base)
+
+## Zero Indiv
+setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/ZeroSuicide")
+indiv_dat = read.csv("AO Log  consolidated 2002-2019.csv", header = TRUE, na.strings = c("unknown", "?", "", " ", "???","```", "??","10-Apr"))
+## Revenue data
+setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/SustainWorkshop/RevenueAnalysis")
+CIN_revenue = read.csv("CH17-37_20190731_123328.csv", header = TRUE)
+##HRSA
+setwd("S:/Indiana Research & Evaluation/HRSA Healthy Start/Monthly Client-Level Data - HSMED/July 2019")
+hrsa = read.csv("July 2019 Data Export.csv", header = TRUE)
+##CCPE Ad Hoc report
+setwd("S:/Indiana Research & Evaluation/CCPE/Reports/AdHocReport")
+CCPE_report = read.csv("gpraAdultAll.csv", header = TRUE, na.strings = c(-99, 98, 97))
+### TLC Connect 2019
+setwd("P:/Evaluation/TN Lives Count_Connect/Databases")
+tlc_data = read.csv("TLCConnect_10_1_2019.csv", header = TRUE, na.strings = c(-6,-7,-8,-9))
+
+### Cluster AEA 2019
+setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/AEA2019")
+cluster_data = read.csv("Demographics by location.csv", header = TRUE)
+
+#### CCPE SPARS report upload
+setwd("S:/Indiana Research & Evaluation/CCPE/NewGPRAData")
+base = read.csv("Year4data_baseline.csv", header = TRUE, na.strings = c(-99, -98, -97))
+
+setwd("S:/Indiana Research & Evaluation/CCPE/NewGPRAData")
+base = read.csv("baseline.csv", header = TRUE, na.strings = c(-99, -98, -97))
+
+##revenue
+setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/SustainWorkshop/RevenueAnalysis")
+CIN_revenue = read.csv("CH17-37_20190731_123328.csv", header = TRUE)
 
