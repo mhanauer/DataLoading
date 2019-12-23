@@ -224,3 +224,6 @@ base = read.csv("baseline.csv", header = TRUE, na.strings = c(-99, -98, -97))
 setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/SustainWorkshop/RevenueAnalysis")
 CIN_revenue = read.csv("CH17-37_20190731_123328.csv", header = TRUE)
 
+# Centerstone study 2019-2020
+setwd("S:/Indiana Research & Evaluation/Matthew Hanauer/Centerstone_Study_2019_2020")
+center_dat = read.csv("BelongGive_DataClean_7.20.csv", header = TRUE)
